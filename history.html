@@ -3,9 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- font awesome CDN -->
+    <script src="https://kit.fontawesome.com/f0c0829e22.js" crossorigin="anonymous"></script>
+    <!-- google font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+            extend: {
+                colors: {
+                "primary-color": "#B4F461",
+                "h-color": "#111111",
+                "p-color": "#111111b3"
+                },
+            //   fontFamily: {
+            //     sans: ['Graphik', 'sans-serif'],
+            //     serif: ['Merriweather', 'serif'],
+            //   }
+            }
+            }
+        }
+    </script>
+    <!-- daisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <title>Donate Transaction History</title>
+    <style>
+        body {
+            font-family: "Lexend", sans-serif;
+            }
+    </style>
 </head>
 <body>
-    
+    <!-- header start -->
+    <header class="backdrop-blur bg-white/50 sticky top-0">
+        <nav class="bg-[#F9F7F3] py-6">
+            <div class="navbar lg:w-10/12 mx-auto lg:p-0 p-5">
+                <div class="navbar-start">
+                    <a href="blog.html" class="bg-primary-color text-h-color lg:py-3 py-2 lg:px-8 px-6 lg:font-semibold font-medium lg:text-xl text-base rounded-lg">Blog</a>
+                </div>
+                <div class="navbar-center lg:flex  gap-4">
+                    <img src="images/logo.png" alt="">
+                    <h1 class="text-xl md:block hidden font-semibold text-h-color">Donate Bangladesh</h1>
+                </div>
+                <div class="navbar-end lg:gap-3 gap-2">
+                    <img src="images/coin.png" alt="">
+                    <h3 class="lg:text-xl text-lg font-medium text-p-color"><span id="main-money">5500</span>BDT</h3>
+                </div>
+            </div>
+        </nav>
+        <div class="flex justify-center gap-4 pt-20 pb-8">
+            <button class="bg-primary-color text-h-text lg:font-semibold font-medium lg:text-xl text-lg lg:px-8 px-6 lg:py-4 py-3 rounded-lg">Donation</button>
+            <a href="history.html" class="border-2 border-[#1111114d] text-p-color lg:font-semibold font-medium lg:text-xl text-lg lg:px-8 px-6 lg:py-4 py-3 rounded-lg">History</a>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <script src="js/history.js"></script>
 </body>
 </html>
