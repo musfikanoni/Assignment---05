@@ -1,4 +1,4 @@
-
+let transactionHistory = [];
 
 function uptdateMoney(initialMoney, inputMoney, donateValue){
     let money = initialMoney - inputMoney;
@@ -20,11 +20,22 @@ document.getElementById('donation-form1').addEventListener('submit', function(ev
 
         document.getElementById('main-money').innerText = money;
         document.getElementById('donate-amount1').innerText = donateMoney;
+
     }
     else{
         console.error('Invalid input values');
         alert('please enter valid donation amount');
     }
+
+    const transactionTime = new Date().toLocaleString("en-US", { timeZone: "Asia/Dhaka" });
+    transactionHistory.push({
+        amount: amount,
+        cardName: cardName,
+        time: transactionTime
+    });
+    
+    // Clear the input field
+    amountInput.value = '';
 
 })
 

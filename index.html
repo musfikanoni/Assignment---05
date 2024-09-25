@@ -19,11 +19,7 @@
                 "primary-color": "#B4F461",
                 "h-color": "#111111",
                 "p-color": "#111111b3"
-              },
-            //   fontFamily: {
-            //     sans: ['Graphik', 'sans-serif'],
-            //     serif: ['Merriweather', 'serif'],
-            //   }
+              }
             }
           }
         }
@@ -57,7 +53,7 @@
         </nav>
         <div class="flex justify-center gap-4 pt-20 pb-8">
             <button class="bg-primary-color text-h-text lg:font-semibold font-medium lg:text-xl text-lg lg:px-8 px-6 lg:py-4 py-3 rounded-lg">Donation</button>
-            <a href="history.html" class="border-2 border-[#1111114d] text-p-color lg:font-semibold font-medium lg:text-xl text-lg lg:px-8 px-6 lg:py-4 py-3 rounded-lg">History</a>
+            <a href="history.html" onclick="openHistory()" class="border-2 border-[#1111114d] text-p-color lg:font-semibold font-medium lg:text-xl text-lg lg:px-8 px-6 lg:py-4 py-3 rounded-lg">History</a>
         </div>
     </header>
     <!-- headedr end -->
@@ -67,17 +63,31 @@
         <div class="lg:flex border-2 border-[#1111111a] p-8 rounded-2xl">
             <img src="images/noakhali.png" alt="">
             <div class="lg:ps-8 ps-0">
-                <div class="flex gap-2 bg-[#1111110d] max-w-[20%] py-2 px-5 lg:mt-0 mt-10 rounded-lg">
+                <div class="flex gap-2 bg-[#1111110d] lg:max-w-[20%] py-2 px-5 max-w-full lg:mt-0 mt-10 rounded-lg">
                     <img class="max-w-6 h-6" src="images/coin.png" alt="">
-                    <h3 class="flex items-center w-[70%] text-[#111111b3] text-base font-normal"><span id="donate-amount1">0</span>BDT</h3>
+                    <h3 class="flex items-center text-[#111111b3] text-base font-normal"><span id="donate-amount1">0</span>BDT</h3>
                 </div>
                 
                 <h2 class="font-bold text-xl pt-5">Donate for Flood at Noakhali, Bangladesh</h2>
                 <p class="text-p-color lg:text-left text-justify font-light text-base pt-4"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                 <form id="donation-form1">
                     <input id="donate-inp1" class="mt-6 outline-none py-4 px-4 w-full rounded-lg border-2 border-[#1111111a] text-base font-light" type="text" placeholder="Write Donation Amount" required><br>
-                    <button id="donate-btn1" class="bg-primary-color mt-5 text-xl font-semibold w-full px-8 py-4 rounded-lg" type="submit">Donate Now</button>
+                    <button id="donate-btn1"class="show-modal  bg-primary-color mt-5 text-xl font-semibold w-full px-8 py-4 rounded-lg" type="submit">Donate Now</button>
                 </form>
+                <!-- <div class="modal h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-50 hidden">
+                    <div class="rounded bg-white shadow-lg w-1/6">
+                        <div class="px-4 py-2">
+                            <h1 class="text-center">Congrates!</h1>
+                        </div>
+                        <div class="p-3 text-center">
+                            <p>Have You Donated for Houmankind</p>
+                            <h2>Successfully</h2>
+                        </div>
+                        <div class="flex justify-center items-center w-100 p-3">
+                            <button class="btn dimission-btn px-3 py-1 close-modal">Close Donfirmation</button>
+                        </div>
+                    </div>
+                </div> -->
             </div>
         </div>
         <!-- seccond card -->
